@@ -1,12 +1,12 @@
 import React from 'react'
-import logo from '../Untitled design (1).png'
+import Logo from '../assets/DogTinderLogo.png'
 
 const Header = () => {
     return (
-        <div className="header-image">
+        <div className="header">
             <div className='header-container'>
                 <h1>
-                    <img src={logo}/>
+                    <img src={Logo} />
                     Dog Tinder
                 </h1>
             </div>

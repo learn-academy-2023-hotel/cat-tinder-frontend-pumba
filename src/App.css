@@ -1,17 +1,27 @@
 .header-container {
-  background-color: none;
-  border: 2px solid black;
-  height: 30rem;
-  width: 30rem;
-  text-align: center;
   color: red;
   font-weight: 600;
-  /* background-image: url("/Users/learnacademy/Desktop/cat-tinder-frontend/src/assets/Untitled design (1).png"); */
-  background-position: center;
+  
 }
 
-.header-image {
-  background-image: url("/Users/learnacademy/Desktop/cat-tinder-frontend/src/assets/Untitled design (1).png");
-  background-repeat: no-repeat;
-  background-position-y: ;
+ .header {
+  text-align: center;
+} 
+.header img {
+  height:125px;
+  width: 125px;
+  margin: 25px;
+}
+
+.header h1 {
+  font-size: 100px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: red;
+  width: 100%;
+  text-align: center;
+  color: white;
 }
