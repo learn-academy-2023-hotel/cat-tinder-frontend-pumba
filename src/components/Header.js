@@ -14,4 +14,3 @@ const Header = () => {
     )
 }
 export default Header
-// "/Users/learnacademy/Desktop/cat-tinder-frontend/src/assets/Untitled design (1).png"
