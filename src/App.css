@@ -1,3 +1,25 @@
+* {
+  text-align: center;
+}
+.center {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.nav a {
+  color: red;
+  font-size: 35px;
+  margin: 5px;
+}
+
+.nav a:hover{
+background-color:red;
+color: white;
+}
+
 .header-container {
   color: red;
   font-weight: 600;
@@ -25,3 +47,4 @@
   text-align: center;
   color: white;
 }
+

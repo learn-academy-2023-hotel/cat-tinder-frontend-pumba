@@ -1,17 +1,32 @@
-import React from 'react'
-import Logo from '../assets/DogTinderLogo.png'
+import React from "react";
+import Logo from "../assets/DogTinderLogo.png";
+import { Nav, NavItem, NavLink } from "reactstrap";
 
 const Header = () => {
-    return (
-        <div className="header">
-            <div className='header-container'>
-                <h1>
-                    <img src={Logo} />
-                    Dog Tinder
-                </h1>
-            </div>
+  return (
+    <div className="header">
+      <div className="header-container">
+        <h1>
+          <img src={Logo} />
+          Dog Tinder
+        </h1>
+        <div className="nav center">
+        <Nav>
+          <NavItem>
+            <NavLink active href="/">
+              Home
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/DogIndex">Start Matching</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/DogNew">Create a Profile</NavLink>
+          </NavItem>
+        </Nav>
         </div>
-    )
-}
-export default Header
-// "/Users/learnacademy/Desktop/cat-tinder-frontend/src/assets/Untitled design (1).png"
+      </div>
+    </div>
+  );
+};
+export default Header;
