@@ -30,6 +30,5 @@ describe("<Header />", () => {
     renderHeader()
     const indexElement = screen.getByText(/Dog Tinder/i)
     expect(indexElement).toBeInTheDocument()
-
   })
 });

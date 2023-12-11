@@ -4,12 +4,6 @@ import { MemoryRouter, Route, Routes } from "react-router-dom";
 import mockDogs from "../mockDogs";
 import { BrowserRouter } from "react-router-dom";
 
-// const renderHome = () => {
-//   <BrowserRouter>
-//     <Home />
-//   </BrowserRouter>;
-// };
-
 const renderHome = () => {
   render(
     <BrowserRouter>
