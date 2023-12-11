@@ -2,11 +2,9 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <>
-        <div className='footer'>
-        <footer> &copy;M and Dalton's|Dog Tinder</footer>
-        </div>
-        </>
+        
+        <footer className='footer'>&Copy;M and Dalton's|Dog Tinder</footer>
+        
     )
 }
 export default Footer

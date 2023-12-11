@@ -1,10 +1,10 @@
 import React from 'react'
 
-const CatNew = () => {
+const DogNew = () => {
     return (
         <>
-        CatNew
+        DogNew
         </>
     )
 }
-export default CatNew
+export default DogNew

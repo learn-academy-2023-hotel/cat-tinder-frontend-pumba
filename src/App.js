@@ -1,10 +1,10 @@
 import React, { useState} from 'react'
 import Footer from './components/Footer'
 import Header from './components/Header'
-import CatEdit from './pages/CatEdit'
-import CatIndex from './pages/CatIndex'
-import CatNew from './pages/CatNew'
-import CatShow from './pages/CatShow'
+import DogEdit from './pages/DogEdit'
+import DogIndex from './pages/DogIndex'
+import DogNew from './pages/DogNew'
+import DogShow from './pages/DogShow'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import { Routes, Route } from 'react-router-dom'
@@ -19,13 +19,14 @@ const App = () => {
     console.log(dogs)
     return (
         <>
+        
           <Header />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/catindex" element={<CatIndex />} />
-              <Route path="/catshow" element={<CatShow />} />
-              <Route path="/catnew" element={<CatNew />} />
-              <Route path="/catedit" element={<CatEdit />} />
+              <Route path="/dogindex" element={<DogIndex />} />
+              <Route path="/dogshow" element={<DogShow />} />
+              <Route path="/dognew" element={<DogNew />} />
+              <Route path="/dogedit" element={<DogEdit />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           <Footer />
