@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import mockDogs from "../mockDogs.js";
+import React from "react";
 import { Card, CardTitle, CardSubtitle, CardText, CardBody } from "reactstrap";
 import { NavLink } from "react-router-dom";
 
@@ -21,8 +20,9 @@ const DogIndex = ({ dogs }) => {
                 <CardSubtitle className="mb-2 text-muted" tag="h6">
                   {dog.age}
                 </CardSubtitle>
-
-                <NavLink to={`/dogshow/${dog.id}`}>Check me out!</NavLink>
+                <NavLink to={`/dogshow/${dog.id}`} className='nav-link'>
+                    Check me out!
+                </NavLink>
               </CardBody>
             </Card>
           );

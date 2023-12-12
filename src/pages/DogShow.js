@@ -1,5 +1,6 @@
 import React from "react";
-import { useParams, NavLink } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const DogShow = ({ dogs }) => {
   const { id } = useParams();
