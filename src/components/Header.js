@@ -11,19 +11,19 @@ const Header = () => {
           Dog Tinder
         </h1>
         <div className="nav center">
-        <Nav>
-          <NavItem>
-            <NavLink active href="/">
-              Home
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="/DogIndex">Start Matching</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="/DogNew">Create a Profile</NavLink>
-          </NavItem>
-        </Nav>
+          <Nav>
+            <NavItem>
+              <NavLink active href="/">
+                Home
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/dogindex">Start Matching</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/dognew">Create a Profile</NavLink>
+            </NavItem>
+          </Nav>
         </div>
       </div>
     </div>
