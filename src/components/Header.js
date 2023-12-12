@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../assets/DogTinderLogo.png";
-import { Nav, NavItem, NavLink } from "reactstrap";
+import { Nav, NavItem } from "reactstrap";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -11,19 +12,19 @@ const Header = () => {
           Dog Tinder
         </h1>
         <div className="nav center">
-        <Nav>
-          <NavItem>
-            <NavLink active href="/">
-              Home
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="/DogIndex">Start Matching</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="/DogNew">Create a Profile</NavLink>
-          </NavItem>
-        </Nav>
+          <Nav>
+            <NavItem>
+              <NavLink active to="/">
+                Home
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/dogindex" className="nav-link">Start Matching</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/dognew" className="nav-link">Create a Profile</NavLink>
+            </NavItem>
+          </Nav>
         </div>
       </div>
     </div>

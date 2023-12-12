@@ -1,10 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const CatEdit = () => {
-    return (
-        <>
-        CatEdit
-        </>
-    )
+const DogEdit = () => {
+    <h1>DogEdit</h1>
 }
-export default CatEdit
+
+export default DogEdit

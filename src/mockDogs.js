@@ -11,7 +11,7 @@ const mockDogs = [
         name: "Taylor",
         age: 11,
         enjoys: "sleeping under the sun",
-        image: "https://www.petlandmontgomery.com/wp-content/uploads/2023/05/1161918_800-600x450.jpg"
+        image: "https://www.petlandmontgomery.com/wp-content/uploads/2023/05/1161918_800-600x450.jpg" 
     },
     {
         id: 3,
