@@ -13,7 +13,7 @@ const DogShow = ({ dogs }) => {
           <h1>{selectedDog.name}</h1>
           <h2>{selectedDog.age}</h2>
           <h3>{selectedDog.enjoys}</h3>
-          <NavLink to='/dogindex'>Back</NavLink>
+          <NavLink to="/dogindex">Back</NavLink>
         </>
       )}
     </>
