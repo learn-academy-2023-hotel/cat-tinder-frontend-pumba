@@ -1,10 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const DogEdit = () => {
-    return (
-        <>
-        CatEdit
-        </>
-    )
+    <h1>DogEdit</h1>
 }
+
 export default DogEdit

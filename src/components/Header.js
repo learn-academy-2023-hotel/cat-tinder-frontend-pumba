@@ -14,15 +14,15 @@ const Header = () => {
         <div className="nav center">
           <Nav>
             <NavItem>
-              <NavLink active href="/">
+              <NavLink active to="/">
                 Home
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/dogindex">Start Matching</NavLink>
+              <NavLink to="/dogindex" className="nav-link">Start Matching</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/dognew">Create a Profile</NavLink>
+              <NavLink to="/dognew" className="nav-link">Create a Profile</NavLink>
             </NavItem>
           </Nav>
         </div>
