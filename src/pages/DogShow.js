@@ -11,10 +11,12 @@ const DogShow = ({ dogs }) => {
       {selectedDog && (
         <>
           <img alt={`${selectedDog.name}'s Profile`} src={selectedDog.image} />
-          <h1>{selectedDog.name}</h1>
-          <h2>{selectedDog.age}</h2>
-          <h3>{selectedDog.enjoys}</h3>
-          <NavLink to="/dogindex">Back</NavLink>
+          <div className="selected-dogs">
+            <h1>{selectedDog.name}</h1>
+            <h2>{selectedDog.age}</h2>
+            <p>Enjoys: {selectedDog.enjoys}</p>
+            <NavLink to="/dogindex">Back</NavLink>
+          </div>
         </>
       )}
     </>
