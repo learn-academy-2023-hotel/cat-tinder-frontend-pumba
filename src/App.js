@@ -20,6 +20,10 @@ const App = () => {
     console.log("created dog:", createdDog)
   }
 
+  const updateDog = (dog) => {
+    console.log("update:", dog)
+  }
+
   return (
     <>
       <Header />
@@ -28,7 +32,7 @@ const App = () => {
         <Route path="/dogindex" element={<DogIndex dogs={dogs} />} />
         <Route path="/dogshow/:id" element={<DogShow  dogs={dogs} />} />
         <Route path="/dognew" element={<DogNew createDog={createDog} />} />
-        <Route path="/dogedit" element={<DogEdit />} />
+        <Route path="/dogedit/:id" element={<DogEdit dogs={dogs} updateDog={updateDog} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
