@@ -26,7 +26,7 @@ color: white;
   
 }
 
- .header {
+.header {
   text-align: center;
 } 
 .header img {
@@ -46,5 +46,16 @@ color: white;
   width: 100%;
   text-align: center;
   color: white;
+}
+
+.card-index {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  display: flex;
+}
+
+
+.selected-dog {
+  height: 25vh;
 }
 
