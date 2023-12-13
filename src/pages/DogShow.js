@@ -15,7 +15,12 @@ const DogShow = ({ dogs }) => {
             <h1>{selectedDog.name}</h1>
             <h2>{selectedDog.age}</h2>
             <p>Enjoys: {selectedDog.enjoys}</p>
-            <NavLink to="/dogindex">Back</NavLink>
+            <NavLink to={`/dogedit/${selectedDog.id}`} className="nav-link">
+            Edit Profile
+            </NavLink>
+            <NavLink to="/dogindex">
+              Back
+            </NavLink>
           </div>
         </>
       )}
@@ -23,3 +28,5 @@ const DogShow = ({ dogs }) => {
   );
 };
 export default DogShow;
+
+
