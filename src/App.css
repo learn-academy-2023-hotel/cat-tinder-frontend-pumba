@@ -1,5 +1,6 @@
 * {
   text-align: center;
+
 }
 .center {
   display: flex;
@@ -61,20 +62,31 @@ color: white;
 
 
 .card button {
-  background-color: red;
-  color: white;
+  background-color: none;
+  color: red;
   font-weight: 500px;
+  border: none;
 }
 
 button:hover {
-  background-color: white;
-  color: red;
+  background-color: red;
+  color: white;
   border-left: none;
   border-right: none;
 }
 
+.nav-link {
+  margin: 0 auto; /* Center horizontally and vertically */
+  text-align: center; /* Center the text within the .nav-link */
+}
+
+
 .nav-link:visited {
   color: red;
+}
+
+.nav-link:not(:last-child) {
+  margin-right: -75px; /* Adjust as needed */
 }
 
 form {
@@ -91,5 +103,14 @@ form {
   color: red;
   background-color: white;
   border-style: none;
+}
 
+.edit-container {
+  border: 2px solid none;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  margin: 10px auto;
+  max-width: 100%;
+  text-align: center;
 }

@@ -8,6 +8,7 @@ const DogNew = ({ createDog }) => {
   const [newDog, setNewDog] = useState({
     name: "",
     age: "",
+    location: "",
     enjoys: "",
     image: "",
   });
@@ -43,6 +44,16 @@ const DogNew = ({ createDog }) => {
             value={newDog.age}
           />
         </FormGroup>
+        <FormGroup>
+          <Label for="location">Location</Label>
+          <Input
+            id="location"
+            name="location"
+            type="text"
+            onChange={handleChange}
+            value={newDog.location}
+          />
+          </FormGroup>
         <FormGroup>
           <Label for="enjoys">Enjoys</Label>
           <Input

@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { Button, Form, FormGroup, Input, Label } from "reactstrap"
 
+
 const DogEdit = ({ dogs, updateDog }) => {
   const { id } = useParams()
   const navigate = useNavigate()
@@ -11,6 +12,7 @@ const DogEdit = ({ dogs, updateDog }) => {
     id: currentDog.id,
     name: currentDog.name,
     age: currentDog.age,
+    location: currentDog.location,
     enjoys: currentDog.enjoys,
     image: currentDog.image
   })
@@ -33,8 +35,8 @@ const DogEdit = ({ dogs, updateDog }) => {
           name="name"
           type="text"
           onChange={handleChange}
-          value={editDog.name}
-        />
+          value={editDog.name} 
+        /> 
       </FormGroup>
       <FormGroup>
         <Label for="age">Age</Label>
@@ -44,6 +46,16 @@ const DogEdit = ({ dogs, updateDog }) => {
           type="text"
           onChange={handleChange}
           value={editDog.age}
+        />
+      </FormGroup>
+      <FormGroup>
+        <Label for="age">Location</Label>
+        <Input
+          id="location"
+          name="location"
+          type="text"
+          onChange={handleChange}
+          value={editDog.location}
         />
       </FormGroup>
       <FormGroup>

@@ -10,7 +10,7 @@ import NotFound from "./pages/NotFound";
 import { Routes, Route } from "react-router-dom";
 
 
-import mockDogs from "./mockDogs";
+// import mockDogs from "./mockDogs";
 
 import "./App.css";
 
