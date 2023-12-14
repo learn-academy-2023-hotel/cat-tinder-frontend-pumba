@@ -1,5 +1,6 @@
 import React from "react";
 import HomeLogo from "../assets/The Woof.png";
+
 const Home = () => {
   return (
     <main className="center">

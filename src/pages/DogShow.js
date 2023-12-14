@@ -20,6 +20,7 @@ const DogShow = ({ dogs, destroyDog }) => {
               margin: "0 auto",
               border: "",
               position: "static",
+
             }}
           >
             <img
@@ -75,10 +76,3 @@ const DogShow = ({ dogs, destroyDog }) => {
 };
 export default DogShow;
 
-{
-  /* <button
-  onClick={() => destroyDog(currentDog.id)}
-  className="show-button">
-  Delete Profile
-</button> */
-}

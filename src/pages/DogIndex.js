@@ -6,12 +6,13 @@ import VerifiedLogo from "../assets/verifiedicon.jpg";
 const DogIndex = ({ dogs }) => {
   return (
     <>
-      <div className="card-index" style={{ position: "static" }}>
+      <div className="card-index">
         {dogs?.map((dog, index) => {
           return (
             <Card
               style={{
                 width: "18rem",
+                // padding: "10px"
               }}
               key={index}
             >
