@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header-container" >
-        <h1 style={{ fontFamily: "Dhurjati', sans-serif"}}>
+      <h1 style={{ fontFamily: "'Dhurjati', sans-serif"}}>
           <img src={Logo} />
           Dog Tinder
         </h1>

@@ -2,13 +2,14 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { Card, CardBody, CardTitle, CardSubtitle, CardText } from "reactstrap";
-import VerifiedLogo from '../assets/verifiedicon.jpg'
+import VerifiedLogo from "../assets/verifiedicon.jpg";
+import DestroyDog from "../components/DestroyDog";
 
 const DogShow = ({ dogs, destroyDog }) => {
   const { id } = useParams();
   let currentDog = dogs?.find((dog) => dog.id === +id);
 
-  console.log("dogs:", dogs);
+  // console.log("dogs:", dogs);
   return (
     <>
       {currentDog && (
@@ -17,7 +18,8 @@ const DogShow = ({ dogs, destroyDog }) => {
             style={{
               width: "28.5rem",
               margin: "0 auto",
-              border: "", position: "static"
+              border: "",
+              position: "static",
             }}
           >
             <img
@@ -26,31 +28,57 @@ const DogShow = ({ dogs, destroyDog }) => {
               style={{ height: "375px", width: "100%" }}
             />
             <CardBody>
-              
-              <CardTitle tag="h5" style={{ fontSize:"35px" }}>{currentDog.name} {currentDog.age} <img src={VerifiedLogo} style={{ height: "20px", width: "auto", margin: "0 auto"}}/></CardTitle>
-              <CardSubtitle className="mb-2 text-muted" tag="h6"style={{ fontSize:"15px" }}>
+              <CardTitle
+                tag="h5"
+                style={{
+                  fontSize: "30px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                {currentDog.name}
+                <span style={{ margin: "0 5px" }}>|</span> {currentDog.age}{" "}
+                <img
+                  src={VerifiedLogo}
+                  style={{ height: "30px", width: "auto", marginLeft: "10px" }}
+                />
+              </CardTitle>
+
+              <CardSubtitle
+                className="mb-2 text-muted"
+                tag="h6"
+                style={{ fontSize: "15px" }}
+              >
                 {currentDog.location}
               </CardSubtitle>
-              <CardText style={{ fontSize:"25px" }}>Enjoys: {currentDog.enjoys} </CardText>
-              <div className="edit-container" style={{ fontSize:"25px" }}>
+              <CardText style={{ fontSize: "25px" }}>
+                Enjoys: {currentDog.enjoys}{" "}
+              </CardText>
+              <div className="edit-container" style={{ fontSize: "25px" }}>
                 <NavLink to={`/dogedit/${currentDog.id}`} className="nav-link">
-                  <button>Edit Profile</button>  
+                  <button className="show-button">Edit Profile</button>
                 </NavLink>
-                <NavLink to="/dogindex/" className="nav-link">
-                  <button onClick={() => destroyDog(currentDog.id)}>
-                    Delete Profile
-                  </button>
-                </NavLink>
+                <br/>
+                <DestroyDog destroyDog={destroyDog} />
               </div>
             </CardBody>
           </Card>
-          <br/>
-              <NavLink to="/dogindex" >
-                <button style={{ fontSize:"25px" }}>Back</button>
-              </NavLink>
+          <br />
+          <NavLink to="/dogindex">
+            <button style={{ fontSize: "20px" }}>Back</button>
+          </NavLink>
         </>
       )}
     </>
   );
 };
 export default DogShow;
+
+{
+  /* <button
+  onClick={() => destroyDog(currentDog.id)}
+  className="show-button">
+  Delete Profile
+</button> */
+}

@@ -5,6 +5,7 @@ import DogEdit from "./pages/DogEdit";
 import DogIndex from "./pages/DogIndex";
 import DogNew from "./pages/DogNew";
 import DogShow from "./pages/DogShow";
+import DestroyDog from "./components/DestroyDog"
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import { Routes, Route } from "react-router-dom";
@@ -76,6 +77,7 @@ const App = () => {
         <Route path="/dogshow/:id" element={<DogShow  dogs={dogs} destroyDog={destroyDog} />} />
         <Route path="/dognew" element={<DogNew createDog={createDog} />} />
         <Route path="/dogedit/:id" element={<DogEdit dogs={dogs} updateDog={updateDog} />} />
+        {/* <Route path="/destroydog/:id" element={<DestroyDog destroyDog={destroyDog} />} />  */}
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

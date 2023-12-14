@@ -1,12 +1,20 @@
-import React, { useState } from "react"
-import { useNavigate, useParams } from "react-router-dom"
-import { Button, Form, FormGroup, Input, Label } from "reactstrap"
-
+import React, { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import {
+  Button,
+  Form,
+  FormGroup,
+  Input,
+  Label,
+  Modal,
+  ModalBody,
+  ModalFooter,
+} from "reactstrap";
 
 const DogEdit = ({ dogs, updateDog }) => {
-  const { id } = useParams()
-  const navigate = useNavigate()
-  let currentDog = dogs?.find((dog) => dog.id === +id)
+  const { id } = useParams();
+  const navigate = useNavigate();
+  let currentDog = dogs?.find((dog) => dog.id === +id);
 
   const [editDog, setEditDog] = useState({
     id: currentDog.id,
@@ -14,17 +22,28 @@ const DogEdit = ({ dogs, updateDog }) => {
     age: currentDog.age,
     location: currentDog.location,
     enjoys: currentDog.enjoys,
-    image: currentDog.image
-  })
-  
+    image: currentDog.image,
+  });
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const handleChange = (e) => {
-    setEditDog({ ...editDog, [e.target.name]: e.target.value })
-  }
+    setEditDog({ ...editDog, [e.target.name]: e.target.value });
+  };
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
+  const handleConfirmSubmit = () => {
+    updateDog(editDog, currentDog.id);
+    navigate(`/dogshow/${id}`);
+    toggleModal();
+  };
 
   const handleSubmit = () => {
-    updateDog(editDog, currentDog.id)
-    navigate(`/dogshow/${id}`)
-  }
+    toggleModal();
+  };
 
   return (
     <Form>
@@ -35,8 +54,8 @@ const DogEdit = ({ dogs, updateDog }) => {
           name="name"
           type="text"
           onChange={handleChange}
-          value={editDog.name} 
-        /> 
+          value={editDog.name}
+        />
       </FormGroup>
       <FormGroup>
         <Label for="age">Age</Label>
@@ -49,7 +68,7 @@ const DogEdit = ({ dogs, updateDog }) => {
         />
       </FormGroup>
       <FormGroup>
-        <Label for="age">Location</Label>
+        <Label for="location">Location</Label>
         <Input
           id="location"
           name="location"
@@ -78,9 +97,21 @@ const DogEdit = ({ dogs, updateDog }) => {
           value={editDog.image}
         />
       </FormGroup>
-      <Button onClick={handleSubmit}>Submit</Button>
-    </Form>
-  )
-}
+      <Button onClick={toggleModal}>Submit</Button>
 
-export default DogEdit
+      <Modal isOpen={isModalOpen} toggle={toggleModal} centered>
+        <ModalBody>Are you sure you want to submit the changes?</ModalBody>
+        <ModalFooter>
+          <Button color="primary" onClick={handleConfirmSubmit}>
+            Yes
+          </Button>{" "}
+          <Button color="secondary" onClick={handleSubmit}>
+            Cancel
+          </Button>
+        </ModalFooter>
+      </Modal>
+    </Form>
+  );
+};
+
+export default DogEdit;
