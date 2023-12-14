@@ -63,7 +63,7 @@ const DogNew = ({ createDog }) => {
             value={newDog.image}
           />
         </FormGroup>
-        <Button onClick={handleSubmit}>Submit</Button>
+        <Button onClick={handleSubmit} className="new-button">Submit</Button>
       </Form>
   );
 };

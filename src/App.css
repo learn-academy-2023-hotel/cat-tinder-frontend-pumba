@@ -59,3 +59,37 @@ color: white;
   height: 25vh;
 }
 
+
+.card button {
+  background-color: red;
+  color: white;
+  font-weight: 500px;
+}
+
+button:hover {
+  background-color: white;
+  color: red;
+  border-left: none;
+  border-right: none;
+}
+
+.nav-link:visited {
+  color: red;
+}
+
+form {
+  width: 50%;
+  font-size: x-large;
+  margin: 0 auto;
+}
+
+.new-button {
+  background-color: red;
+}
+
+.new-button:hover {
+  color: red;
+  background-color: white;
+  border-style: none;
+
+}

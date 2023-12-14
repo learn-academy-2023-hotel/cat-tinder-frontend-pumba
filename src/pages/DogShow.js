@@ -14,7 +14,7 @@ const DogShow = ({ dogs, destroyDog }) => {
     <>
       {currentDog && (
         <>
-          <img alt={`${currentDog.name}'s Profile`} src={currentDog.image} />
+          <img alt={`${currentDog.name}'s Profile`} src={currentDog.image} style={{height:"450px", width:"450px"}} />
           <div className="selected-dogs">
             <h1>{currentDog.name}</h1>
             <h2>{currentDog.age}</h2>
