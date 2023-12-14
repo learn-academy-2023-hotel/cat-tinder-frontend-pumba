@@ -1,26 +1,31 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const DogShow = ({ dogs }) => {
+
+const DogShow = ({ dogs, destroyDog }) => {
   const { id } = useParams();
-  let selectedDog = dogs?.find((dog) => dog.id === +id);
+  const navigate = useNavigate();
+  let currentDog = dogs?.find((dog) => dog.id === +id);
 
+ console.log("dogs:", dogs)
   return (
     <>
-      {selectedDog && (
+      {currentDog && (
         <>
-          <img alt={`${selectedDog.name}'s Profile`} src={selectedDog.image} />
+          <img alt={`${currentDog.name}'s Profile`} src={currentDog.image} />
           <div className="selected-dogs">
-            <h1>{selectedDog.name}</h1>
-            <h2>{selectedDog.age}</h2>
-            <p>Enjoys: {selectedDog.enjoys}</p>
-            <NavLink to={`/dogedit/${selectedDog.id}`} className="nav-link">
-            Edit Profile
+            <h1>{currentDog.name}</h1>
+            <h2>{currentDog.age}</h2>
+            <p>Enjoys: {currentDog.enjoys}</p>
+            <NavLink to={`/dogedit/${currentDog.id}`} className="nav-link">
+              Edit Profile
             </NavLink>
-            <NavLink to="/dogindex">
-              Back
+            <NavLink to="/dogindex/" className="nav-link">
+            <button onClick={() => destroyDog(currentDog.id)} >Delete Dog Profile</button>
             </NavLink>
+            <NavLink to="/dogindex">Back</NavLink>
           </div>
         </>
       )}
@@ -28,5 +33,3 @@ const DogShow = ({ dogs }) => {
   );
 };
 export default DogShow;
-
-
