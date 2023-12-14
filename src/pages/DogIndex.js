@@ -12,7 +12,7 @@ const DogIndex = ({ dogs }) => {
             <Card
               style={{
                 width: "18rem",
-                // padding: "10px"
+
               }}
               key={index}
             >
@@ -29,13 +29,6 @@ const DogIndex = ({ dogs }) => {
                     style={{ height: "30px", width: "auto" }}
                   />
                 </CardTitle>
-                {/* <CardSubtitle
-                  className="mb-2 text-muted"
-                  tag="h6"
-                  style={{ fontSize: "25px" }}
-                >
-                  {dog.age}
-                </CardSubtitle> */}
                 <CardSubtitle className="mb-2 text-muted" tag="h6">
                   {dog.location}
                 </CardSubtitle>

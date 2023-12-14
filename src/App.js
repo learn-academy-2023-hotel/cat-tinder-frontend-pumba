@@ -77,7 +77,6 @@ const App = () => {
         <Route path="/dogshow/:id" element={<DogShow  dogs={dogs} destroyDog={destroyDog} />} />
         <Route path="/dognew" element={<DogNew createDog={createDog} />} />
         <Route path="/dogedit/:id" element={<DogEdit dogs={dogs} updateDog={updateDog} />} />
-        {/* <Route path="/destroydog/:id" element={<DestroyDog destroyDog={destroyDog} />} />  */}
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

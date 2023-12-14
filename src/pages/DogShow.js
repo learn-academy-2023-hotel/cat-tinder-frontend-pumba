@@ -9,7 +9,6 @@ const DogShow = ({ dogs, destroyDog }) => {
   const { id } = useParams();
   let currentDog = dogs?.find((dog) => dog.id === +id);
 
-  // console.log("dogs:", dogs);
   return (
     <>
       {currentDog && (
