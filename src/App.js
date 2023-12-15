@@ -11,9 +11,10 @@ import NotFound from "./pages/NotFound";
 import { Routes, Route } from "react-router-dom";
 
 
-// import mockDogs from "./mockDogs";
 
 import "./App.css";
+
+const url = 'https://good-dogs-tinder.onrender.com'
 
 const App = () => {
   
@@ -23,13 +24,13 @@ const App = () => {
   }, [])
 
   const readDog = () => {
-    fetch("http://localhost:3000/dogs")
+    fetch(`${url}`)
     .then((response) => response.json())
     .then((payload) => setDogs(payload))
     .catch((error) => console.log(error))
   }
   const createDog = (dog) => {
-    fetch("http://localhost:3000/dogs", {
+    fetch(`${url}/dogs`, {
       body: JSON.stringify(dog),
       headers: {
         "Content-Type": "application/json"
@@ -42,7 +43,7 @@ const App = () => {
   }
 
   const updateDog = (dog, id) => {
-    fetch(`http://localhost:3000/dogs/${id}`, {
+    fetch(`${url}${id}`, {
       body: JSON.stringify(dog),
       headers: {
         "Content-Type": "application/json"
@@ -55,7 +56,7 @@ const App = () => {
   }
 
   const destroyDog = (id) => {
-    fetch(`http://localhost:3000/dogs/${id}`,{
+    fetch(`${url}${id}`,{
       headers: {
         "Content-Type": "application/json"
       },
