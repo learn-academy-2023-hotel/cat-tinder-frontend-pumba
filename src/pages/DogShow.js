@@ -55,9 +55,9 @@ const DogShow = ({ dogs, destroyDog }) => {
               <CardText style={{ fontSize: "25px" }}>
                 Enjoys: {currentDog.enjoys}{" "}
               </CardText>
-              <div className="edit-container" style={{ fontSize: "25px", width: "auto"}}>
-                <NavLink to={`/dogedit/${currentDog.id}`} className="nav-link">
-                  <button className="show-button">Edit Profile</button>
+              <div className="edit-container">
+                <NavLink to={`/dogedit/${currentDog.id}`}>
+                  <button style={{ fontSize: "25px" }}>Edit Profile</button>
                 </NavLink>
                 <br/>
                 <DestroyDog destroyDog={destroyDog} />

@@ -116,20 +116,25 @@ form {
 .edit-container {
   border: 2px solid none;
   display: flex;
-  gap: 2vw; 
+  gap: 5px;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  margin: 1vw auto; 
-  width: 80vw; 
+  /* align-items: center; */
+  margin: 0 auto; 
+  width: auto; 
   text-align: center;
+  
 }
 
 .show-button {
-  font-size: 2vw; 
-  margin: 2vw;
+  border: 2px solid black;
+  font-size: 25px; 
+  white-space: nowrap;
+  width: 50%;
 }
-
+.show-button + .show-button {
+  margin-left: 0 auto;
+}
 .center-buttons {
   text-align: center;
 }
