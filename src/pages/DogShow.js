@@ -19,8 +19,9 @@ const DogShow = ({ dogs, destroyDog }) => {
               margin: "0 auto",
               border: "",
               position: "static",
-              height: "31rem",
-              marginTop: "-15px"
+              height: "31.5rem",
+              marginTop: "-15px",
+              // overflow: "hidden"
 
             }}
           >
