@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardTitle, CardSubtitle, CardText, CardBody } from "reactstrap";
 import { NavLink } from "react-router-dom";
+import VerifiedLogo from "../assets/verifiedicon.jpg";
 
 const DogIndex = ({ dogs }) => {
   return (
@@ -11,17 +12,32 @@ const DogIndex = ({ dogs }) => {
             <Card
               style={{
                 width: "18rem",
+
               }}
               key={index}
             >
-              <img alt="dog profile" src={dog.image} />
+              <img
+                alt="dog profile"
+                src={dog.image}
+                style={{ height: "300px", width: "100%", margin: "0 auto" }}
+              />
               <CardBody>
-                <CardTitle tag="h5">{dog.name}</CardTitle>
+                <CardTitle tag="h5" style={{ fontSize: "30px" }}>
+                  {dog.name}{" "}
+                  <img
+                    src={VerifiedLogo}
+                    style={{ height: "30px", width: "auto" }}
+                  />
+                </CardTitle>
                 <CardSubtitle className="mb-2 text-muted" tag="h6">
-                  {dog.age}
+                  {dog.location}
                 </CardSubtitle>
-                <NavLink to={`/dogshow/${dog.id}`} className='nav-link'>
-                    Check me out!
+                <NavLink
+                  to={`/dogshow/${dog.id}`}
+                  className="nav-link"
+                  style={{ fontSize: "25px" }}
+                >
+                  <button className="button-index">Check me out!</button>
                 </NavLink>
               </CardBody>
             </Card>

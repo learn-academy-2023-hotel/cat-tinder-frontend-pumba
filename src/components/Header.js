@@ -6,12 +6,12 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header">
-      <div className="header-container">
-        <h1>
+      <div className="header-container" >
+      <h1 style={{ fontFamily: "'Dhurjati', sans-serif"}}>
           <img src={Logo} />
           Dog Tinder
         </h1>
-        <div className="nav center">
+        <div className="nav center" style={{ marginTop:"-15px"}}>
           <Nav>
             <NavItem>
               <NavLink active to="/" className="nav-link">
@@ -30,4 +30,5 @@ const Header = () => {
     </div>
   );
 };
+
 export default Header;

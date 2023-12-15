@@ -5,12 +5,13 @@ import DogEdit from "./pages/DogEdit";
 import DogIndex from "./pages/DogIndex";
 import DogNew from "./pages/DogNew";
 import DogShow from "./pages/DogShow";
+import DestroyDog from "./components/DestroyDog"
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import { Routes, Route } from "react-router-dom";
 
 
-import mockDogs from "./mockDogs";
+// import mockDogs from "./mockDogs";
 
 import "./App.css";
 

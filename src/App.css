@@ -1,6 +1,10 @@
 * {
   text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  position: static;
+  box-sizing: border-box;
 }
+
 .center {
   display: flex;
   margin: 0 auto;
@@ -11,32 +15,32 @@
 
 .nav a {
   color: red;
-  font-size: 35px;
-  margin: 5px;
+  font-size: 2vw;
+  margin: 1vw; 
 }
 
-.nav a:hover{
-background-color:red;
-color: white;
+.nav a:hover {
+  background-color: red;
+  color: white;
 }
 
 .header-container {
   color: red;
   font-weight: 600;
-  
 }
 
 .header {
   text-align: center;
-} 
+}
+
 .header img {
-  height:125px;
-  width: 125px;
-  margin: 25px;
+  height: 8vw; 
+  width: 8vw; 
+  margin: 2vw; 
 }
 
 .header h1 {
-  font-size: 100px;
+  font-size: 5vw; 
 }
 
 .footer {
@@ -52,6 +56,10 @@ color: white;
   flex-wrap: wrap;
   justify-content: space-around;
   display: flex;
+  margin: 0 auto;
+  padding: 10px, 10px;
+  position: static;
+
 }
 
 
@@ -59,3 +67,69 @@ color: white;
   height: 25vh;
 }
 
+.card button {
+  background-color: none;
+  color: red;
+  font-weight: 500px;
+  border: none;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: red;
+  color: white;
+  border-left: none;
+  border-right: none;
+}
+
+.nav-link {
+  text-align: center;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link:visited {
+  color: red;
+}
+
+.nav-link:not(:last-child) {
+  margin-right: -2vw; 
+}
+
+form {
+  width: 50vw; 
+  font-size: 2vw; 
+  margin: 0 auto;
+}
+
+.new-button {
+  background-color: red;
+}
+
+.new-button:hover {
+  color: red;
+  background-color: white;
+  border-style: none;
+}
+
+.edit-container {
+  border: 2px solid none;
+  display: flex;
+  gap: 2vw; 
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1vw auto; 
+  width: 80vw; 
+  text-align: center;
+}
+
+.show-button {
+  font-size: 2vw; 
+  margin: 2vw; 
+}
+
+.center-buttons {
+  text-align: center;
+}
