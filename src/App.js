@@ -24,7 +24,7 @@ const App = () => {
   }, [])
 
   const readDog = () => {
-    fetch(`${url}`)
+    fetch(`${url}/dogs`)
     .then((response) => response.json())
     .then((payload) => setDogs(payload))
     .catch((error) => console.log(error))
@@ -43,7 +43,7 @@ const App = () => {
   }
 
   const updateDog = (dog, id) => {
-    fetch(`${url}${id}`, {
+    fetch(`${url}dogs/${id}`, {
       body: JSON.stringify(dog),
       headers: {
         "Content-Type": "application/json"
@@ -56,7 +56,7 @@ const App = () => {
   }
 
   const destroyDog = (id) => {
-    fetch(`${url}${id}`,{
+    fetch(`${url}dogs/${id}`,{
       headers: {
         "Content-Type": "application/json"
       },
