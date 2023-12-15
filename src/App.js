@@ -14,7 +14,6 @@ import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
-const url = 'https://good-dogs-tinder.onrender.com'
 
 const App = () => {
   
@@ -22,7 +21,8 @@ const App = () => {
   useEffect(() => {
     readDog()
   }, [])
-
+  
+  const url = `https://good-dogs-tinder.onrender.com`
   const readDog = () => {
     fetch(`${url}/dogs`)
     .then((response) => response.json())
