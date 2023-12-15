@@ -123,4 +123,12 @@ form {
   text-align: center;
 }
 
-
+.show-button {
+  border: 2px solid black;
+  font-size: 25px; 
+  white-space: nowrap;
+  width: 50%;
+}
+.show-button + .show-button {
+  margin-left: 0 auto;
+}
