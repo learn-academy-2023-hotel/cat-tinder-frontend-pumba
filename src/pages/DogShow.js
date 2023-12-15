@@ -19,6 +19,8 @@ const DogShow = ({ dogs, destroyDog }) => {
               margin: "0 auto",
               border: "",
               position: "static",
+              height: "31rem",
+              marginTop: "-15px"
 
             }}
           >
@@ -55,9 +57,9 @@ const DogShow = ({ dogs, destroyDog }) => {
               <CardText style={{ fontSize: "25px" }}>
                 Enjoys: {currentDog.enjoys}{" "}
               </CardText>
-              <div className="edit-container" style={{ fontSize: "25px" }}>
-                <NavLink to={`/dogedit/${currentDog.id}`} className="nav-link">
-                  <button className="show-button">Edit Profile</button>
+              <div className="edit-container" style={{ marginTop:"-15px"}}>
+                <NavLink to={`/dogedit/${currentDog.id}`}>
+                  <button style={{ fontSize: "25px" }}>Edit Profile</button>
                 </NavLink>
                 <br/>
                 <DestroyDog destroyDog={destroyDog} />
@@ -71,6 +73,7 @@ const DogShow = ({ dogs, destroyDog }) => {
         </>
       )}
     </>
+    
   );
 };
 export default DogShow;
