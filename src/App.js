@@ -22,7 +22,7 @@ const App = () => {
     readDog()
   }, [])
   
-  const url = `https://good-dogs-tinder.onrender.com`
+  const url = `https://dog-tinder-backend.onrender.com`
   const readDog = () => {
     fetch(`${url}/dogs`)
     .then((response) => response.json())
