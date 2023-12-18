@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import {
@@ -12,6 +12,7 @@ import {
   ModalBody,
   ModalFooter,
 } from "reactstrap";
+
 import VerifiedLogo from "../assets/verifiedicon.jpg";
 // import DestroyDog from "../components/DestroyDog";
 
