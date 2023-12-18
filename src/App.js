@@ -41,7 +41,7 @@ const App = () => {
   }
 
   const updateDog = (dog, id) => {
-    fetch(`${url}dogs/${id}`, {
+    fetch(`${url}/dogs/${id}`, {
       body: JSON.stringify(dog),
       headers: {
         "Content-Type": "application/json"
