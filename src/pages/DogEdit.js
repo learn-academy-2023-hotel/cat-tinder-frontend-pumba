@@ -17,12 +17,12 @@ const DogEdit = ({ dogs, updateDog }) => {
   let currentDog = dogs?.find((dog) => dog.id === +id);
 
   const [editDog, setEditDog] = useState({
-    id: currentDog.id,
-    name: currentDog.name,
-    age: currentDog.age,
-    location: currentDog.location,
-    enjoys: currentDog.enjoys,
-    image: currentDog.image,
+    id: currentDog?.id,
+    name: currentDog?.name,
+    age: currentDog?.age,
+    location: currentDog?.location,
+    enjoys: currentDog?.enjoys,
+    image: currentDog?.image,
   });
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -37,7 +37,7 @@ const DogEdit = ({ dogs, updateDog }) => {
 
   const handleConfirmSubmit = () => {
     updateDog(editDog, currentDog.id);
-    navigate(`/dogshow/${id}`);
+    navigate("/dogindex");
     toggleModal();
   };
 
