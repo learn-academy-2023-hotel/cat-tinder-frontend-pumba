@@ -54,7 +54,7 @@ const App = () => {
   }
 
   const destroyDog = (id) => {
-    fetch(`${url}dogs/${id}`,{
+    fetch(`${url}/dogs/${id}`,{
       headers: {
         "Content-Type": "application/json"
       },
