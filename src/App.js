@@ -23,6 +23,7 @@ const App = () => {
   }, [])
   
   const url = `https://dog-tinder-backend.onrender.com`
+
   const readDog = () => {
     fetch(`${url}/dogs`)
     .then((response) => response.json())
@@ -55,17 +56,17 @@ const App = () => {
     .catch((error) => console.log("Dog update errors:", error))
   }
 
-  const destroyDog = (id) => {
-    fetch(`${url}dogs/${id}`,{
-      headers: {
-        "Content-Type": "application/json"
-      },
-      method: "DELETE"
-    })
-    .then((response) => response.json())
-    .then(() => readDog())
-    .catch((error) => console.log("Dog delete errors:", error))
-  }
+  const destroyDog = (id) => {}
+  //   fetch(`${url}dogs/${id}`,{
+  //     headers: {
+  //       "Content-Type": "application/json"
+  //     },
+  //     method: "DELETE"
+  //   })
+  //   .then((response) => response.json())
+  //   .then(() => readDog())
+  //   .catch((error) => console.log("Dog delete errors:", error))
+  // }
 
 
 
@@ -74,10 +75,10 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/dogindex" element={<DogIndex dogs={dogs} />} />
-        <Route path="/dogshow/:id" element={<DogShow  dogs={dogs} destroyDog={destroyDog} />} />
-        <Route path="/dognew" element={<DogNew createDog={createDog} />} />
         <Route path="/dogedit/:id" element={<DogEdit dogs={dogs} updateDog={updateDog} />} />
+        <Route path="/dogindex" element={<DogIndex dogs={dogs} />} />
+        <Route path="/dognew" element={<DogNew createDog={createDog} />} />
+        <Route path="/dogshow/:id" element={<DogShow  dogs={dogs} destroyDog={destroyDog} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

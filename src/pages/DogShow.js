@@ -1,13 +1,42 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { Card, CardBody, CardTitle, CardSubtitle, CardText } from "reactstrap";
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  CardText,
+  Button,
+  Modal,
+  ModalBody,
+  ModalFooter,
+} from "reactstrap";
 import VerifiedLogo from "../assets/verifiedicon.jpg";
-import DestroyDog from "../components/DestroyDog";
+// import DestroyDog from "../components/DestroyDog";
 
 const DogShow = ({ dogs, destroyDog }) => {
   const { id } = useParams();
+
+  const navigate = useNavigate();
+
   let currentDog = dogs?.find((dog) => dog.id === +id);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
+  const handleConfirmDelete = () => {
+    destroyDog(id);
+    navigate("/dogindex");
+    toggleModal();
+  };
+
+  const handleSubmit = () => {
+    toggleModal();
+  };
 
   return (
     <>
@@ -21,8 +50,6 @@ const DogShow = ({ dogs, destroyDog }) => {
               position: "static",
               height: "31.5rem",
               marginTop: "-15px",
-              // overflow: "hidden"
-
             }}
           >
             <img
@@ -58,12 +85,36 @@ const DogShow = ({ dogs, destroyDog }) => {
               <CardText style={{ fontSize: "25px" }}>
                 Enjoys: {currentDog.enjoys}{" "}
               </CardText>
-              <div className="edit-container" style={{ marginTop:"-15px"}}>
+              <div className="edit-container" style={{ marginTop: "-15px" }}>
                 <NavLink to={`/dogedit/${currentDog.id}`}>
                   <button style={{ fontSize: "25px" }}>Edit Profile</button>
                 </NavLink>
-                <br/>
-                <DestroyDog destroyDog={destroyDog} />
+                <br />
+                <button onClick={toggleModal} className="show-button">
+                  Delete Profile
+                </button>
+                <Modal isOpen={isModalOpen} toggle={toggleModal} centered>
+                  <ModalBody>
+                    Are you sure you want to delete the profile?
+                  </ModalBody>
+                  <ModalFooter className="center-buttons">
+                    <Button
+                      color="primary"
+                      onClick={handleConfirmDelete}
+                      style={{ margin: "auto" }}
+                    >
+                      Yes
+                    </Button>{" "}
+                    <Button
+                      color="secondary"
+                      onClick={handleSubmit}
+                      style={{ margin: "auto" }}
+                    >
+                      No
+                    </Button>
+                  </ModalFooter>
+                </Modal>
+                {/* <DestroyDog destroyDog={destroyDog} /> */}
               </div>
             </CardBody>
           </Card>
@@ -74,8 +125,7 @@ const DogShow = ({ dogs, destroyDog }) => {
         </>
       )}
     </>
-    
   );
 };
-export default DogShow;
 
+export default DogShow;
