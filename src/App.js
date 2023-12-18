@@ -50,7 +50,7 @@ const App = () => {
     })
     .then((response) => response.json())
     .then(() => readDog())
-    .catch((error) => console.log("Dog update errors:", error))
+    .catch((error) => console.log("Dog update errors:", error)) 
   }
 
   const destroyDog = (id) => {
