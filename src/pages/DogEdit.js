@@ -102,10 +102,10 @@ const DogEdit = ({ dogs, updateDog }) => {
       <Modal isOpen={isModalOpen} toggle={toggleModal} centered>
         <ModalBody>Are you sure you want to submit the changes?</ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={handleConfirmSubmit}>
+          <Button color="primary" onClick={handleConfirmSubmit} style={{ margin: "auto" }}>
             Yes
           </Button>{" "}
-          <Button color="secondary" onClick={handleSubmit}>
+          <Button color="secondary" onClick={handleSubmit} style={{ margin: "auto" }}>
             Cancel
           </Button>
         </ModalFooter>

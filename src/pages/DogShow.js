@@ -14,7 +14,7 @@ import {
 } from "reactstrap";
 
 import VerifiedLogo from "../assets/verifiedicon.jpg";
-// import DestroyDog from "../components/DestroyDog";
+
 
 const DogShow = ({ dogs, destroyDog }) => {
   const { id } = useParams();
@@ -84,7 +84,7 @@ const DogShow = ({ dogs, destroyDog }) => {
                 {currentDog.location}
               </CardSubtitle>
               <CardText style={{ fontSize: "25px" }}>
-                Enjoys: {currentDog.enjoys}{" "}
+                Enjoys: {currentDog.enjoys}
               </CardText>
               <div className="edit-container" style={{ marginTop: "-15px" }}>
                 <NavLink to={`/dogedit/${currentDog.id}`}>

@@ -5,12 +5,9 @@ import DogEdit from "./pages/DogEdit";
 import DogIndex from "./pages/DogIndex";
 import DogNew from "./pages/DogNew";
 import DogShow from "./pages/DogShow";
-import DestroyDog from "./components/DestroyDog"
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import { Routes, Route } from "react-router-dom";
-
-
 
 import "./App.css";
 
@@ -56,17 +53,17 @@ const App = () => {
     .catch((error) => console.log("Dog update errors:", error))
   }
 
-  const destroyDog = (id) => {}
-  //   fetch(`${url}dogs/${id}`,{
-  //     headers: {
-  //       "Content-Type": "application/json"
-  //     },
-  //     method: "DELETE"
-  //   })
-  //   .then((response) => response.json())
-  //   .then(() => readDog())
-  //   .catch((error) => console.log("Dog delete errors:", error))
-  // }
+  const destroyDog = (id) => {
+    fetch(`${url}dogs/${id}`,{
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+    .then((response) => response.json())
+    .then(() => readDog())
+    .catch((error) => console.log("Dog delete errors:", error))
+  }
 
 
 
