@@ -36,7 +36,8 @@ const DogEdit = ({ dogs, updateDog }) => {
   };
 
   const handleConfirmSubmit = () => {
-    console.log("Delete button clicked")
+    console.log("Edit button clicked");
+    console.log("Edit data:", editDog);
     updateDog(editDog, currentDog.id);
     navigate("/dogindex");
     toggleModal();
