@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Form, FormGroup, Label, Input, Button, FormFeedback } from "reactstrap";
+import {
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  Button,
+  FormFeedback,
+} from "reactstrap";
 import { useNavigate } from "react-router-dom";
 
 const DogNew = ({ createDog }) => {
@@ -101,9 +108,11 @@ const DogNew = ({ createDog }) => {
           invalid={formErrors.image}
         />
       </FormGroup>
-      <Button type="submit" className="new-button">
-        Submit
-      </Button>
+      <div style={{ marginBottom: "50px" }}>
+        <Button type="submit" className="new-button">
+          Submit
+        </Button>
+      </div>
     </Form>
   );
 };
