@@ -49,7 +49,7 @@ const DogShow = ({ dogs, destroyDog }) => {
               margin: "0 auto",
               border: "",
               position: "static",
-              height: "31.5rem",
+              height: "auto",
               marginTop: "-15px",
             }}
           >
