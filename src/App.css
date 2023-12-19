@@ -132,3 +132,8 @@ form {
 .show-button + .show-button {
   margin-left: 0 auto;
 }
+
+.back-button {
+  position: relative;
+  z-index: 1;
+}
