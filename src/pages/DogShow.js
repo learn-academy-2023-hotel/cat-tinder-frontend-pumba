@@ -15,7 +15,6 @@ import {
 
 import VerifiedLogo from "../assets/verifiedicon.jpg";
 
-
 const DogShow = ({ dogs, destroyDog }) => {
   const { id } = useParams();
 
@@ -115,14 +114,16 @@ const DogShow = ({ dogs, destroyDog }) => {
                     </Button>
                   </ModalFooter>
                 </Modal>
-                {/* <DestroyDog destroyDog={destroyDog} /> */}
               </div>
             </CardBody>
           </Card>
-          <br />
-          <NavLink to="/dogindex">
-            <button className="back-button" style={{ fontSize: "20px" }}>Back</button>
-          </NavLink>
+          <div style={{ marginBottom: "50px" }}>
+            <NavLink to="/dogindex">
+              <button className="back-button" style={{ fontSize: "20px" }}>
+                Back
+              </button>
+            </NavLink>
+          </div>
         </>
       )}
     </>
