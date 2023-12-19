@@ -11,7 +11,7 @@ const Header = () => {
           <img src={Logo} />
           Dog Tinder
         </h1>
-        <div className="nav center" style={{ marginTop:"-35px"}}>
+        <div className="nav center" style={{ marginTop:"0px"}}>
           <Nav>
             <NavItem>
               <NavLink active to="/" className="nav-link">
