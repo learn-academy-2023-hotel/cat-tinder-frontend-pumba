@@ -117,6 +117,7 @@ const DogShow = ({ dogs, destroyDog }) => {
               </div>
             </CardBody>
           </Card>
+          <br/>
           <div style={{ marginBottom: "50px" }}>
             <NavLink to="/dogindex">
               <button className="back-button" style={{ fontSize: "20px" }}>
